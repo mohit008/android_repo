@@ -19,7 +19,7 @@ import java.io.InputStreamReader;
  * Created by mohit.soni on 26-04-2018.
  */
 
-public class TextDownload extends Activity {
+public class TextDownloadSample extends Activity {
 
     // object
     ProgressDialog mProgressDialog;
@@ -36,7 +36,7 @@ public class TextDownload extends Activity {
         // initialise
         text = (TextView) findViewById(R.id.text);
 
-        mProgressDialog = new ProgressDialog(TextDownload.this);
+        mProgressDialog = new ProgressDialog(TextDownloadSample.this);
         mProgressDialog.setTitle("Downloading...");
         mProgressDialog.setMessage("Loading...");
         mProgressDialog.setIndeterminate(false);

@@ -16,7 +16,7 @@ import com.mohit.program.R;
  * Author @ Mohit Soni on 26-04-2018 17:05.
  */
 
-public class BitmapOnCanvas extends Activity {
+public class BitmapOnCanvasSample extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

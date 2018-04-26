@@ -19,7 +19,7 @@ import com.mohit.program.R;
  * Created by Mohit Soni on January 21,2014
  */
 
-public class StopWatch extends Activity {
+public class StopWatchSample extends Activity {
 
     // objects
     private static TextView hour, min, sec, mili, current;

@@ -10,7 +10,7 @@ import android.widget.TextView;
  * Author @ Mohit Soni on 26-04-2018 17:15.
  */
 
-public class DynamicLayout extends Activity {
+public class DynamicLayoutSample extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
