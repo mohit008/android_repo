@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Programs</string>
+    <string name="title_activity_maictivity">Maictivity</string>
+    <string name="title_activity_main">Main</string>
 </resources>
