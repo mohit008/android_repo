@@ -1,7 +1,6 @@
-package com.mohit.program.grid_view;
+package com.mohit.program.collection_view;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,30 +54,29 @@ public class GridViewSample extends Activity {
             }
         });
 
-        // change index background
+        // change index
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-//                grid.getChildAt(position).setBackgroundColor(Color.CYAN);
             }
         });
-//        grid.setOnTouchListener(new View.OnTouchListener() {
-//
-//            @Override
-//            public boolean onTouch(View view, MotionEvent event) {
-//                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-//                    view.setBackgroundColor(Color.CYAN);
-//                }
-//                if (event.getAction() == MotionEvent.ACTION_CANCEL) {
-//                    view.setBackgroundColor(Color.BLUE);
-//                }
-//                if (event.getAction() == MotionEvent.ACTION_UP) {
-//                    view.setBackgroundColor(Color.MAGENTA);
-//
-//                }
-//                return true;
-//            }
-//        });
+/*        grid.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    view.setBackgroundColor(Color.CYAN);
+                }
+                if (event.getAction() == MotionEvent.ACTION_CANCEL) {
+                    view.setBackgroundColor(Color.BLUE);
+                }
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    view.setBackgroundColor(Color.MAGENTA);
+
+                }
+                return true;
+            }
+        });*/
     }
 }
