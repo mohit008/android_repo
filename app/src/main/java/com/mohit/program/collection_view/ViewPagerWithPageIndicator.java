@@ -1,14 +1,10 @@
 package com.mohit.program.collection_view;
 
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -30,14 +26,6 @@ public class ViewPagerWithPageIndicator extends Activity {
     private Timer timer;
     private int position = 0;
 
-    static public int[] img = {
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher,
-            R.mipmap.ic_launcher
-            ,
-    };
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_pager_indicator);
@@ -51,11 +39,12 @@ public class ViewPagerWithPageIndicator extends Activity {
 
             @Override
             public Object instantiateItem(ViewGroup container, int position) {
-                View view = (View) container;
-                if(view == null){
-                    view = getLayoutInflater().inflate(R.layout.item, container, false);
-                }
-                ((ImageView) view.findViewById(R.id.ivItem)).setImageResource(img[position]);
+                View view = getLayoutInflater().inflate(R.layout.item, container, false);
+                ((ImageView) view.findViewById(R.id.ivItem))
+                        .setVisibility(View.VISIBLE);
+                ((ImageView) view.findViewById(R.id.ivItem))
+                         .setImageResource(R.mipmap.ic_launcher);
+                container.addView(view);
                 return view;
             }
 
@@ -100,9 +89,9 @@ public class ViewPagerWithPageIndicator extends Activity {
         for (int i = 0; i < indicatorPos.length; i++) {
             TextView text = (TextView) findViewById(indicatorPos[i]);
             if (i == position) {
-                text.setBackgroundColor(Color.WHITE);
+                text.setBackgroundResource(R.drawable.circle_white);
             } else {
-                text.setBackgroundColor(Color.BLUE);
+                text.setBackgroundResource(R.drawable.circle_holo_blue_dark);
             }
         }
     }
@@ -122,13 +111,13 @@ public class ViewPagerWithPageIndicator extends Activity {
                     }
                 });
             }
-        }, 2000, 3000);  // first time,period time (you can control speed)
+        }, 2000, 3000);                                                  // first time,period time (you can control speed)
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        timer.cancel();              // stop timer
+        timer.cancel();                                                               // stop timer
     }
 
     @Override

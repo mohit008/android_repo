@@ -1,4 +1,4 @@
-package com.mohit.program.text_download;
+package com.mohit.program.download;
 
 import android.app.Activity;
 import android.app.ProgressDialog;

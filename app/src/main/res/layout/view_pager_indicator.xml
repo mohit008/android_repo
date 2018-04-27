@@ -7,7 +7,7 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/myviewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="200dp"
         android:layout_centerInParent="true" />
 
 
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:orientation="horizontal">
+        android:layout_below="@+id/myviewpager">
 
         <LinearLayout
             android:id="@+id/llIndicator2"
@@ -30,28 +30,28 @@
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/circle" />
+                android:background="@drawable/circle_holo_blue_dark" />
 
             <TextView
                 android:id="@+id/tvIndicator2"
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/circle" />
+                android:background="@drawable/circle_holo_blue_dark" />
 
             <TextView
                 android:id="@+id/tvIndicator3"
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/circle" />
+                android:background="@drawable/circle_holo_blue_dark" />
 
             <TextView
                 android:id="@+id/tvIndicator4"
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/circle" />
+                android:background="@drawable/circle_holo_blue_dark" />
         </LinearLayout>
 
     </RelativeLayout>

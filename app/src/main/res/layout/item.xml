@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--Author @ Mohit Soni-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
     <ImageView
         android:id="@+id/ivItem"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:src="@mipmap/ic_launcher" />
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/tvItem"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_below="@+id/ivItem"/>
+        android:layout_height="30dp"
+        android:text="Android"
+        android:gravity="center"
+        android:layout_below="@+id/ivItem"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btItem"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Watch!!!    how to add download button on YouTube page.. "
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"/>
 </RelativeLayout>
