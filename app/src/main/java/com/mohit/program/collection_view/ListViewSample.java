@@ -27,6 +27,7 @@ public class ListViewSample extends Activity{
         setContentView(R.layout.custom_view);
 
         list = (ListView)findViewById(R.id.list);
+        list.setVisibility(View.VISIBLE);
 
         // set only text
         /* ArrayAdapter<String> _li = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1,data); */

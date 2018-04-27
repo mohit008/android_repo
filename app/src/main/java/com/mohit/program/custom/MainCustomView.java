@@ -1,4 +1,4 @@
-package com.mohit.program.custom_view;
+package com.mohit.program.custom;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -21,5 +21,6 @@ public class MainCustomView extends Activity{
         setContentView(R.layout.custom_view);
         ((ListView)findViewById(R.id.list)).setVisibility(View.GONE);
         customView = (CustomView)this.findViewById(R.id.customview);
+        customView.setVisibility(View.VISIBLE);
     }
 }

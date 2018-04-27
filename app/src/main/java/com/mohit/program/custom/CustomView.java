@@ -1,4 +1,4 @@
-package com.mohit.program.custom_view;
+package com.mohit.program.custom;
 
 import android.content.Context;
 import android.graphics.Canvas;
