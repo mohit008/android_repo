@@ -3,12 +3,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    <ImageView
-        android:id="@+id/ivItem"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/ivItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
 
     <TextView
         android:id="@+id/tvItem"
@@ -16,7 +24,7 @@
         android:layout_height="30dp"
         android:text="Android"
         android:gravity="center"
-        android:layout_below="@+id/ivItem"
+        android:layout_below="@+id/rl"
         android:visibility="gone"/>
 
     <Button
