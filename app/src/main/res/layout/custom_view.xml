@@ -4,6 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:visibility="gone"/>
+
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"

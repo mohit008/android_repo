@@ -53,6 +53,7 @@ public class YoutubePlayerSample extends Activity {
         setContentView(R.layout.item);
         button = (Button)this.findViewById(R.id.btItem);
         button.setVisibility(View.VISIBLE);
+        button.setText("Watch!!!    how to add download button on YouTube page.. ");
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override

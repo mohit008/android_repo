@@ -31,7 +31,7 @@
         android:id="@+id/btItem"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Watch!!!    how to add download button on YouTube page.. "
+        android:text=""
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:visibility="gone"/>
