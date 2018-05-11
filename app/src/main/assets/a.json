@@ -1,0 +1,77 @@
+{
+  "root":[
+    {
+      "child_tree":[
+        {
+          "child_tree":[
+
+          ],
+          "text":"A1",
+          "id":"3090"
+        },
+        {
+          "child_tree":[
+
+          ],
+          "text":"A2",
+          "id":"3091"
+        }
+      ],
+      "text":"A",
+      "id":"3089"
+    },
+    {
+      "child_tree":[
+
+      ],
+      "text":"B",
+      "id":"3209"
+    },
+    {
+      "child_tree":[
+
+      ],
+      "text":"C",
+      "id":"3670"
+    },
+    {
+      "child_tree":[
+        {
+          "child_tree":[
+            {
+              "child_tree":[
+
+              ],
+              "text":"D11",
+              "id":"3219"
+            },
+            {
+              "child_tree":[
+
+              ],
+              "text":"D12",
+              "id":"3215"
+            }
+          ],
+          "text":"D1",
+          "id":"3214"
+        },
+        {
+          "child_tree":[
+            {
+              "child_tree":[
+
+              ],
+              "text":"D21",
+              "id":"3274"
+            }
+          ],
+          "text":"D2",
+          "id":"3269"
+        }
+      ],
+      "text":"D",
+      "id":"3269"
+    }
+  ]
+}
