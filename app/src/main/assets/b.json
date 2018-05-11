@@ -1,0 +1,23 @@
+{
+  "detail": [
+    {
+      "id": "59",
+      "first name": "Sandeep",
+      "last name": "Mehta",
+      "email": "abcd@abcde.com",
+      "intro": {
+        "title": "About Me"
+      },
+      "educational": [
+        {
+          "title": "Post Graduation",
+          "degree": "MBA"
+        },
+        {
+          "title": "Graduation",
+          "degree": "B.com"
+        }
+      ]
+    }
+  ]
+}

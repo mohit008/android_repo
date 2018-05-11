@@ -1,15 +1,19 @@
 package com.mohit.program.collection_view;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.mohit.program.R;
 
@@ -41,9 +45,7 @@ public class ListWithSuggestion extends Activity {
         String[] s = xs.split("\n");
         stringArrayList.addAll(Arrays.asList(s));
 
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, stringArrayList);
-        list.setAdapter(arrayAdapter);
+        list.setAdapter(new SetAdapter(this, stringArrayList));
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
@@ -55,6 +57,7 @@ public class ListWithSuggestion extends Activity {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int start, int before, int count) {
             }
+
             @Override
             public void afterTextChanged(Editable editable) {
                 list.setAdapter(null);
@@ -64,12 +67,9 @@ public class ListWithSuggestion extends Activity {
                     Log.i("s", s);
                     updated_list = search(stringArrayList, s.toLowerCase());
 
-                    list.setAdapter(new ArrayAdapter<>(ListWithSuggestion.this
-                            , android.R.layout.simple_list_item_1, updated_list));
+                    list.setAdapter(new SetAdapter(ListWithSuggestion.this, updated_list));
                 } else {
-                    list.setAdapter(new ArrayAdapter<>(ListWithSuggestion.this
-                            , android.R.layout.simple_list_item_1, stringArrayList));
-
+                    list.setAdapter(new SetAdapter(ListWithSuggestion.this, stringArrayList));
                 }
             }
 
@@ -78,7 +78,6 @@ public class ListWithSuggestion extends Activity {
 
             }
         });
-
     }
 
     /**
@@ -96,6 +95,44 @@ public class ListWithSuggestion extends Activity {
             }
         }
         return updated_list;
+    }
+
+    public class SetAdapter extends ArrayAdapter<String> {
+
+        ArrayList<String> stringArrayList = new ArrayList<>();
+        Context context;
+
+        SetAdapter(Context context, ArrayList<String> stringArrayList) {
+            super(context, android.R.layout.simple_list_item_1);
+            this.context = context;
+            this.stringArrayList = stringArrayList;
+        }
+
+        @Override
+        public int getCount() {
+            return stringArrayList.size();
+        }
+
+        @Nullable
+        @Override
+        public String getItem(int position) {
+            return stringArrayList.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return stringArrayList.size();
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View view = convertView;
+            if (view == null) {
+                view = getLayoutInflater().inflate(android.R.layout.simple_list_item_1, parent, false);
+                ((TextView) view.findViewById(android.R.id.text1)).setText(stringArrayList.get(position));
+            }
+            return view;
+        }
     }
 
     // sample string
