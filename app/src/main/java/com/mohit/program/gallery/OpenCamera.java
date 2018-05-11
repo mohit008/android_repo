@@ -55,7 +55,7 @@ public class OpenCamera extends Activity {
                         callCamera();
                     }
                 } else {
-                    callCamera();
+                     callCamera();
                 }
             }
         });

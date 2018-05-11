@@ -5,6 +5,8 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 
@@ -34,6 +36,7 @@ public class TextDownloadSample extends Activity {
         setContentView(R.layout.text_download);
 
         // initialise
+        ((ScrollView) findViewById(R.id.sb)).setVisibility(View.VISIBLE);
         text = (TextView) findViewById(R.id.text);
 
         mProgressDialog = new ProgressDialog(TextDownloadSample.this);
