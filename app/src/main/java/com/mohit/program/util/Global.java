@@ -210,7 +210,7 @@ public class Global {
                 builder.append(error);
                 builder.append("\n");
                 builder.append("\n");
-                builder.append("---------------Detail-------------");
+                builder.append("---------------MapDetail-------------");
                 builder.append("\n");
                 for (StackTraceElement element : strings) {
                     builder.append(element);

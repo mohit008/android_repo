@@ -2,4 +2,16 @@
     <string name="app_name">Programs</string>
     <string name="title_activity_maictivity">Maictivity</string>
     <string name="title_activity_main">Main</string>
+
+
+
+    <!--ClickCount-->
+    <string name="digit">0</string>
+    <string name="count">Count</string>
+    <string name="reset">Reset</string>
+    <string name="one">1X</string>
+    <string name="two">2X</string>
+    <string name="three">3X</string>
+    <string name="four">4X</string>
+    <string name="five">5X</string>
 </resources>

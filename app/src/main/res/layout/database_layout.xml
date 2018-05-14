@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Author @ Mohit Soni-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- edit text -->
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:hint="Enter Name"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:hint="Enter Surname"
+        android:text="" />
+
+    <!-- save button -->
+    <Button
+        android:id="@+id/save"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/surname"
+        android:text="Save" />
+
+    <!-- show button -->
+    <Button
+        android:id="@+id/show"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/surname"
+        android:layout_toEndOf="@+id/save"
+        android:layout_toRightOf="@+id/save"
+        android:text="Show" />
+
+    <!-- delete button -->
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/surname"
+        android:layout_toEndOf="@+id/show"
+        android:layout_toRightOf="@+id/show"
+        android:text="Delete" />
+
+    <!-- list view -->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/show" />
+
+</RelativeLayout>

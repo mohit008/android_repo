@@ -5,7 +5,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.mohit.program"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -30,4 +30,22 @@ dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     compile 'com.github.bmelnychuk:atv:1.2.+'
     implementation files('libs/jsoup-1.8.1.jar')
+    implementation files('libs/google-play-services_lib.jar')
+    compile 'com.google.android.gms:play-services-auth:15.0.1'
+    compile 'com.google.android.gms:play-services-maps:15.0.1'
+
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:palette-v7:26.1.0'
+    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+
+    // ExternalDataSample
+    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
+
+    // LocationGoogleClient
+    compile 'com.google.android.gms:play-services-location:15.0.1'
+
+    compile 'me.tankery.lib:circularSeekBar:1.1.4'
+    compile 'com.mikhaellopez:circularprogressbar:1.1.1'
+
+    compile 'com.github.lzyzsd:circleprogress:1.2.1'
 }

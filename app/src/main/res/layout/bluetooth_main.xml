@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Author @ Mohit Soni-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:text="Search" />
+
+    <Button
+        android:id="@+id/paired"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/search"
+        android:text="Paired" />
+
+    <ListView
+        android:id="@+id/paired_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/paired"/>
+</RelativeLayout>

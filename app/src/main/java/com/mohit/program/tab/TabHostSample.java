@@ -1,6 +1,5 @@
 package com.mohit.program.tab;
 
-import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,14 +25,18 @@ public class TabHostSample extends TabActivity {
 
         TabSpec news = tab.newTabSpec("New");
         news.setIndicator("Check New Job");
+
+        // add to manifest
         Intent intent = new Intent(this,Tab_1.class);
         news.setContent(intent);
 
-
         TabSpec old = tab.newTabSpec("Old");
         old.setIndicator("Check Old Job");
+
+        // add to manifest
         Intent intent_old = new Intent(this,Tab_2.class);
         old.setContent(intent_old);
+
 
         tab.addTab(news);
         tab.addTab(old);

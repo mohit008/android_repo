@@ -4,21 +4,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <WebView
+        android:id="@+id/webview"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:text="Scan"
+        android:visibility="gone" />
+
     <EditText
         android:id="@+id/et"
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 
     <com.mohit.program.custom.CustomView
         android:id="@+id/customview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:visibility="gone" />
 </LinearLayout>
