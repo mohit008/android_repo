@@ -48,4 +48,7 @@ dependencies {
     compile 'com.mikhaellopez:circularprogressbar:1.1.1'
 
     compile 'com.github.lzyzsd:circleprogress:1.2.1'
+
+    // ScanMaster
+    compile 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
 }

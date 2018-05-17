@@ -48,7 +48,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".motion_event.MoveAround">
+        <activity android:name=".signature.SignatureMaster">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -132,6 +132,16 @@
             android:name=".notification.Alarmnotify"
             android:label="@string/app_name" >
         </activity>
+
+        <!--SMSMaster-->
+        <receiver android:name=".sms.SMS_Receive" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!--SignatureMaster-->
+        <activity android:name=".signature.CaptureSignature" />
 
     </application>
 </manifest>
