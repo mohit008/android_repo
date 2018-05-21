@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="euro_currency_sign">\u20A0</string>
+        <string name="colon_sign">\u20A1</string>
+        <string name="cruzeiro_sign">\u20A2</string> 
+        <string name="french_franc_sign">\u20A3</string>   
+        <string name="lira_sign">\u20A4</string>
+        <string name="mill_sign">\u20A5</string> 
+        <string name="naira_sign">\u20A6</string>  
+        <string name="peseta_sign">\u20A7</string>  
+        <string name="rupee_sign">\u20A8</string>   
+        <string name="won_sign">\u20A9</string> 
+        <string name="new_sheqel_sign">\u20AA</string>  
+        <string name="dong_sign">\u20AB</string> 
+        <string name="euro_sign">\u20AC</string>      
+        <string name="kip_sign">\u20AD</string> 
+        <string name="tugrik_sign">\u20AE</string>  
+        <string name="drachma_sign">\u20AF</string>   
+        <string name="german_penny_sign">\u20B0</string>     
+        <string name="peso_sign">\u20B1</string>
+        <string name="guarani_sign">\u20B2</string>  
+        <string name="austral_sign">\u20B3</string>    
+        <string name="hryvnia_sign">\u20B4</string>     
+        <string name="cedi_sign">\u20B5</string>   
+        <string name="livre_tournois_sign">\u20B6</string>     
+        <string name="spesmilo_sign">\u20B7</string>  
+        <string name="tenge_sign">\u20B8</string> 
+        <string name="indian_rupee_sign">\u20B9</string> 
+</resources>

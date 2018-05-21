@@ -26,6 +26,15 @@
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <!--MasterWallpaper-->
     <uses-permission android:name="android.permission.SET_WALLPAPER"/>
 
@@ -48,7 +57,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".signature.SignatureMaster">
+        <activity android:name=".draw.signature.SignatureMaster">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -141,7 +150,7 @@
         </receiver>
 
         <!--SignatureMaster-->
-        <activity android:name=".signature.CaptureSignature" />
+        <activity android:name=".draw.signature.CaptureSignature" />
 
     </application>
 </manifest>

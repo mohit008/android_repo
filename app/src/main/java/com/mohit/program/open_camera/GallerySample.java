@@ -1,4 +1,4 @@
-package com.mohit.program.gallery;
+package com.mohit.program.open_camera;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Gallery;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.mohit.program.R;
 

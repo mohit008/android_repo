@@ -1,4 +1,4 @@
-package com.mohit.program.set_intent;
+package com.mohit.program.add_event;
 
 import android.app.Activity;
 import android.content.Intent;

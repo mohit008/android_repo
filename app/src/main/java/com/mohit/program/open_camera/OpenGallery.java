@@ -1,4 +1,4 @@
-package com.mohit.program.gallery;
+package com.mohit.program.open_camera;
 
 import android.Manifest;
 import android.app.Activity;
