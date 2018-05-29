@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.Display;
 import android.widget.GridView;
 
+import com.mohit.program.R;
+
 import java.util.ArrayList;
 
 public class GridWallPaperMaster extends Activity {
@@ -18,9 +20,9 @@ public class GridWallPaperMaster extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.custom_view);
 
-        grid= (GridView)findViewById(R.id.gridview);
+        grid= (GridView)findViewById(R.id.grid);
 
         Display  display = getWindowManager().getDefaultDisplay();
         Point point = new Point();
