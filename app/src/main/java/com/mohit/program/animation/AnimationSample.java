@@ -1,4 +1,4 @@
-package com.mohit.program.figure;
+package com.mohit.program.animation;
 
 import android.app.Activity;
 import android.app.Dialog;

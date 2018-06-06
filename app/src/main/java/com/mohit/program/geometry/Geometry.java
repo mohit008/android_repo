@@ -1,4 +1,4 @@
-package com.mohit.program.figure;
+package com.mohit.program.geometry;
 
 import android.app.Activity;
 import android.os.Bundle;
