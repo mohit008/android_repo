@@ -15,8 +15,15 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,19 +51,19 @@ public class Posting {
 
         @Override
         protected Void doInBackground(Void... params) {
-            posting();
+            postingWithDependency();
             return null;
         }
     }
 
     /**
      * uses apache dependcy
-     *
+     * <p>
      * compile 'org.apache.httpcomponents:httpclient:4.5.5'
      *
      * @return
      */
-    public String posting() {
+    public String postingWithDependency() {
         try {
             HttpClient client = new DefaultHttpClient();
             // here we have to pass link/url.
@@ -81,37 +88,41 @@ public class Posting {
         }
         return null;
     }
-//    public void post() {
-//        try {
-//            String data = URLEncoder.encode("api_token", "UTF-8")
-//                    + "=" + URLEncoder.encode("indian-express-token-id", "UTF-8");
-//            data += "&" + URLEncoder.encode("member_email", "UTF-8") + "="
-//                    + URLEncoder.encode("hemant.bhattrai@webdunia.net", "UTF-8");
-//            data += "&" + URLEncoder.encode("member_password", "UTF-8")
-//                    + "=" + URLEncoder.encode("123456", "UTF-8");
-//
-//
-//            String text = "";
-//            BufferedReader reader = null;
-//            URL url = new URL(BASE_URL);
-//            URLConnection conn = url.openConnection();
-//            conn.setDoOutput(true);
-//            OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
-//            wr.write(data);
-//            wr.flush();
-//
-//            reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-//            StringBuilder sb = new StringBuilder();
-//            String line = null;
-//
-//            while ((line = reader.readLine()) != null) {
-//                sb.append(line + "\n");
-//            }
-//            text = sb.toString();
-//            reader.close();
-//        } catch (Exception ex) {
-//        } catch (UnsupportedEncodingException e) {
-//            e.printStackTrace();
-//        }
-//    }
+
+    /**
+     * Generic method to post large data
+     */
+    public void postGeneric() {
+        try {
+            String data = URLEncoder.encode("api_token", "UTF-8")
+                    + "=" + URLEncoder.encode("token", "UTF-8");
+            data += "&" + URLEncoder.encode("member_email", "UTF-8") + "="
+                    + URLEncoder.encode("email", "UTF-8");
+            data += "&" + URLEncoder.encode("member_password", "UTF-8")
+                    + "=" + URLEncoder.encode("123456", "UTF-8");
+
+
+            String text = "";
+            BufferedReader reader = null;
+            URL url = new URL("//-----IP-----//");
+            URLConnection conn = url.openConnection();
+            conn.setDoOutput(true);
+            OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+            wr.write(data);
+            wr.flush();
+
+            reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            StringBuilder sb = new StringBuilder();
+            String line = null;
+
+            while ((line = reader.readLine()) != null) {
+                sb.append(line + "\n");
+            }
+            text = sb.toString();
+            reader.close();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException ex) {
+        }
+    }
 }
