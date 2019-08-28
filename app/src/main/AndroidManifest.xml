@@ -148,5 +148,18 @@
         <!--SignatureMaster-->
         <activity android:name=".draw.signature.CaptureSignature" />
 
+        <!--Phone-->
+        <activity android:name=".broadcast.phone.PhoneMainX"
+            android:excludeFromRecents="true">
+        </activity>
+        <receiver android:name=".broadcast.phone.IncomingCall">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+
     </application>
 </manifest>
