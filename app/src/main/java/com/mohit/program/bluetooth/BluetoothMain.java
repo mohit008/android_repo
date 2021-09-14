@@ -1,10 +1,13 @@
 package com.mohit.program.bluetooth;
 
+import android.Manifest;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -25,6 +28,7 @@ public class BluetoothMain extends Activity implements View.OnClickListener {
     BluetoothAdapter b_adapter;
     ArrayList<BluetoothDevice> b_list;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +53,12 @@ public class BluetoothMain extends Activity implements View.OnClickListener {
 		filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
 
 		registerReceiver(mReceiver, filter);*/
+        requestPermissions(new String[]{
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+
+        }, 100);
     }
 
     @Override
